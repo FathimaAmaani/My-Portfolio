@@ -261,7 +261,7 @@ h4 {
 }
 
 p{
-  font-size: larger;
+  font-size: 1.2rem;
 }
 
 .section, .skills-container, .project, .btn, footer {
@@ -295,6 +295,423 @@ p{
   .about-content {
     text-align: center;
   }
+}
+
+.education-container {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.education-item {
+  background: linear-gradient(120deg, rgba(6, 37, 65, 0.95) 0%, rgba(31, 141, 196, 0.95) 100%);
+  padding: 25px;
+  border-radius: 12px;
+  color: #e0e0e0;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.education-item::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 4px;
+  height: 100%;
+  background: linear-gradient(180deg, #ffcc00 0%, #ffaa00 100%);
+  border-radius: 2px;
+}
+
+.education-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 35px rgba(0,0,0,0.2);
+  border-color: rgba(255, 204, 0, 0.3);
+}
+
+.education-item h3 {
+  font-family: 'Montserrat', Arial, sans-serif;
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: #ffffff;
+  margin-bottom: 15px;
+  letter-spacing: 0.5px;
+  position: relative;
+  z-index: 1;
+}
+
+.education-item p {
+  font-family: 'Roboto', Arial, sans-serif;
+  font-size: 1.2rem;
+  line-height: 1.7;
+  margin-bottom: 12px;
+  color: #e0e0e0;
+  position: relative;
+  z-index: 1;
+}
+
+.education-item p strong {
+  color: #ffcc00;
+  font-weight: 600;
+  font-family: 'Montserrat', Arial, sans-serif;
+  font-size: 1.25rem;
+}
+
+.education-item p:last-child {
+  margin-bottom: 0;
+  font-style: italic;
+  color: #b8c5d1;
+  font-size: 1.1rem;
+}
+
+/* Enhanced project hover effects */
+.project {
+  background: linear-gradient(120deg, rgba(1, 17, 59, 0.95) 0%, rgba(2, 68, 139, 0.835) 100%);
+  padding: 20px;
+  margin-top: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.05);
+  transition: all 0.3s ease;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  position: relative;
+  overflow: hidden;
+}
+
+.project::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 4px;
+  height: 100%;
+  background: linear-gradient(180deg, #ffcc00 0%, #ffaa00 100%);
+  border-radius: 2px;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.project:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 35px rgba(0,0,0,0.2);
+  border-color: rgba(255, 204, 0, 0.3);
+}
+
+.project:hover::before {
+  opacity: 1;
+}
+
+.project h3 {
+  font-family: 'Montserrat', Arial, sans-serif;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #ffffff;
+  margin-bottom: 15px;
+  letter-spacing: 0.5px;
+  position: relative;
+  z-index: 1;
+}
+
+.project p {
+  font-family: 'Roboto', Arial, sans-serif;
+  font-size: 1.2rem;
+  line-height: 1.7;
+  margin-bottom: 12px;
+  color: #e0e0e0;
+  position: relative;
+  z-index: 1;
+}
+
+/* Responsive design for education section */
+@media (max-width: 768px) {
+  .education-item {
+    padding: 20px;
+    margin: 0 10px;
+  }
+  
+  .education-item h3 {
+    font-size: 1.3rem;
+  }
+  
+  .education-item p {
+    font-size: 1.1rem;
+  }
+  
+  .education-item p strong {
+    font-size: 1.15rem;
+  }
+  
+  .project h3 {
+    font-size: 1.3rem;
+  }
+  
+  .project p {
+    font-size: 1.1rem;
+  }
+}
+
+/* Enhanced About Section */
+.about-flex {
+  display: flex;
+  align-items: flex-center;
+  gap: 40px;
+  flex-wrap: wrap;
+  background: linear-gradient(135deg, rgba(6, 37, 65, 0.95) 0%, rgba(31, 141, 196, 0.95) 100%);
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  transition: all 0.3s ease;
+}
+
+.about-flex:hover {
+  transform: scale(1.02);
+  box-shadow: 0 15px 40px rgba(0,0,0,0.3);
+  border-color: rgba(255, 204, 0, 0.3);
+}
+
+.about-content h2 {
+  color: #ffffff;
+  text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+  margin-bottom: 25px;
+}
+
+.about-content p {
+  font-size: 1.25rem;
+  line-height: 1.8;
+  color: #e0e0e0;
+  margin-bottom: 20px;
+  text-align: justify;
+}
+
+.about-img {
+  flex: 0 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.about-img::before {
+  content: '';
+  position: absolute;
+  top: -10px;
+  left: -10px;
+  right: -10px;
+  bottom: -10px;
+  background: linear-gradient(45deg, #ffcc00, #ffaa00, #ffcc00);
+  border-radius: 20px;
+  z-index: -1;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.about-flex:hover .about-img::before {
+  opacity: 0.3;
+}
+
+.about-img img {
+  border-radius: 18px;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.3);
+  transition: all 0.3s ease;
+}
+
+.about-flex:hover .about-img img {
+  transform: scale(1.05);
+  box-shadow: 0 12px 35px rgba(0,0,0,0.4);
+}
+
+/* Enhanced Skills Section */
+.skills-container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 30px;
+  background: linear-gradient(135deg, rgba(1, 17, 59, 0.95) 0%, rgba(2, 68, 139, 0.835) 100%);
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  transition: all 0.3s ease;
+}
+
+.skills-container:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 40px rgba(0,0,0,0.3);
+  border-color: rgba(255, 204, 0, 0.3);
+}
+
+.skills-container div {
+  flex: 1 1 40%;
+  background: rgba(255, 255, 255, 0.05);
+  padding: 25px;
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.skills-container div::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background: linear-gradient(90deg, #ffcc00, #ffaa00, #ffcc00);
+  transform: scaleX(0);
+  transition: transform 0.3s ease;
+}
+
+.skills-container div:hover::before {
+  transform: scaleX(1);
+}
+
+.skills-container div:hover {
+  background: rgba(255, 255, 255, 0.1);
+  transform: translateY(-3px);
+  box-shadow: 0 8px 25px rgba(0,0,0,0.2);
+}
+
+.skills-container h3 {
+  font-family: 'Montserrat', Arial, sans-serif;
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: #ffffff;
+  margin-bottom: 20px;
+  text-align: center;
+  letter-spacing: 0.5px;
+  position: relative;
+  z-index: 1;
+}
+
+.skills-container ul {
+  list-style: none;
+  padding: 0;
+}
+
+.skills-container ul li {
+  font-family: 'Roboto', Arial, sans-serif;
+  font-size: 1.2rem;
+  color: #e0e0e0;
+  margin-bottom: 12px;
+  padding: 10px 15px;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 8px;
+  border-left: 3px solid transparent;
+  transition: all 0.3s ease;
+  position: relative;
+  z-index: 1;
+}
+
+.skills-container ul li:hover {
+  background: rgba(255, 204, 0, 0.1);
+  border-left-color: #ffcc00;
+  transform: translateX(5px);
+  color: #ffffff;
+}
+
+.skills-container ul li::before {
+  content: '▸';
+  color: #ffcc00;
+  font-weight: bold;
+  margin-right: 10px;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.skills-container ul li:hover::before {
+  opacity: 1;
+}
+
+/* Responsive design for enhanced sections */
+@media (max-width: 768px) {
+  .about-flex {
+    padding: 20px;
+    margin: 0 10px;
+  }
+  
+  .about-content p {
+    font-size: 1.15rem;
+  }
+  
+  .skills-container {
+    padding: 20px;
+    margin: 0 10px;
+  }
+  
+  .skills-container div {
+    padding: 20px;
+  }
+  
+  .skills-container h3 {
+    font-size: 1.2rem;
+  }
+  
+  .skills-container ul li {
+    font-size: 1.1rem;
+    padding: 8px 12px;
+  }
+  
+  .education-item h3 {
+    font-size: 1.3rem;
+  }
+  
+  .education-item p {
+    font-size: 1.1rem;
+  }
+  
+  .education-item p strong {
+    font-size: 1.15rem;
+  }
+  
+  .project h3 {
+    font-size: 1.3rem;
+  }
+  
+  .project p {
+    font-size: 1.1rem;
+  }
+  
+  #contact p {
+    font-size: 1.1rem;
+  }
+}
+
+/* Contact section paragraph styling */
+#contact p {
+  font-size: 1.4rem;
+  margin-bottom: 15px;
+  color: #e0e0e0;
+}
+
+#contact p strong {
+  color: #ffcc00;
+  font-weight: 600;
+  font-family: 'Montserrat', Arial, sans-serif;
+}
+
+#contact p a {
+  color: #2707f4 !important;
+  text-decoration: none;
+  transition: color 0.3s ease;
+  font-weight: 600;
+}
+
+#contact p a:hover {
+  color: #fe8282 !important;
+  text-decoration: underline;
+}
+
+#contact p a:visited {
+  color: #f77234 !important;
+}
+
+#contact p a:active {
+  color: #00a6ff !important;
 }
 
 
